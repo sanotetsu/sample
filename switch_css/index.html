@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>デバイスによってCSSを切り替える</title>
+</head>
+<body id="pc">
+<p>PCが赤<br>
+スマホが青<br>
+タブレットが緑</p>
+<script type="text/javascript">
+var deviceId = document.getElementsByTagName("body")[0].id;
+var css = document.createElement("link");
+css.type = "text/css";
+css.rel = "stylesheet";
+if(deviceId == "pc"){
+	css.href= "css/pc.css";
+}else if(deviceId == "sp"){
+	css.href= "css/sp.css";
+}else if(deviceId == "tab"){
+	css.href= "css/tab.css";
+}
+document.getElementsByTagName("head")[0].appendChild(css);
+</script>
+</body>
+</html>
