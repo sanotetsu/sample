@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>マーキープラグイン</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="jquery.marqueePlugin.js"></script>
+<style type="text/css">
+#js{
+	background:#EEE;
+	overflow:hidden;
+}
+#js p{
+	display:inline-block;
+	white-space:nowrap;
+}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+$(function(){
+	$("#js").marqueePlugin({width:900,speed:2000});
+});
+</script>
+<div id="js">
+	<p>あいうえおかきくけこさしすせそ</p>
+</div>
+</body>
+</html>
